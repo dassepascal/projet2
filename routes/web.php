@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\ParticularController;
@@ -36,8 +37,7 @@ Route::get('/home',function(){
     return view('/home');
 })->name('home');
 
-Route::prefix('admin')->name('admin.')->group(function () {
-    Route::resources([
-    'particulars'=>ParticularController::class,
-    ]);
-    });
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('particulars', ParticularController::class);
+});
