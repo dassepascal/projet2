@@ -1,0 +1,3 @@
+créer un mode admin  
+Ajouter une colonne is_admin à la table users
+Mettre à jour le model users
