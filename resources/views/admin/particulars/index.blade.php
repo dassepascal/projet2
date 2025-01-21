@@ -16,7 +16,7 @@
                         <thead>
                             <tr>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    {{ __('Name') }}
+                                    {{ __('Title') }}
                                 </th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     {{ __('Description') }}
@@ -30,7 +30,7 @@
                             @foreach ($particulars as $particular)
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $particular->name }}
+                                        {{ $particular->title }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         {{ $particular->description }}
@@ -42,7 +42,7 @@
                                         <a href="{{ route('admin.particulars.edit', $particular) }}" class="text-blue-500 hover:underline">
                                             {{ __('Edit') }}
                                         </a>
-                                        <form action="{{ route('admin.particulars.destroy', $particular) }}" method="POST" class="inline-block">
+                                        <form action="{{ route('admin.particulars.destroy', $particular) }}" method="POST" class="inline-block" onsubmit="return confirm('Are you sure you want to delete this particular?')">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="text-red-500 hover:underline">

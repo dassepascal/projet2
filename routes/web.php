@@ -39,5 +39,6 @@ Route::get('/home',function(){
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('particulars', ParticularController::class);
+     Route::resource('particulars', ParticularController::class);
+    
 });
