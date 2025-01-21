@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\ParticularController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,9 @@ require __DIR__.'/auth.php';
 Route::get('/home',function(){
     return view('/home');
 })->name('home');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resources([
+    'particulars'=>ParticularController::class,
+    ]);
+    });
