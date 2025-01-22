@@ -20,7 +20,7 @@
 
 <body class="font-sans antialiased ">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        @include('layouts.navbarMain')
+        @include('layouts.navbar')
 
         <!-- Page Heading -->
         @if (isset($header))
