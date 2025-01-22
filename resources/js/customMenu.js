@@ -38,8 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+console.log('test');
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownMenuButtonNav = document.getElementById('dropdownMenuButtonNav');
+    console.log('test', dropdownMenuButtonNav);
+});
+// TODO : fix to delete ?
 
+// const dropdownMenuButtonNav = document.getElementById('dropdownMenuButtonNav');
+// console.log('test',dropdownMenuButtonNav);
+   // const dropdownMenu = document.getElementById('dropdownMenuNav');
 
+    // dropdownMenuButton.addEventListener('click', () => {
+    //     dropdownMenu.classList.toggle('hidden');
+    // });
 
     function toggleMenuVisibility() {
         const menuNavbar = document.getElementById('menu-navbar-main');
