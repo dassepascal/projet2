@@ -15,7 +15,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/customAdmin.js', 'resources/css/custom-css.css'])
+    @vite(['resources/css/customMenu.css', 'resources/js/app.js','resources/js/customMenu.js'  ])
 </head>
 
 <body class="font-sans antialiased ">
@@ -39,3 +39,4 @@
 </body>
 
 </html>
+{{-- <script src="{{ asset('js/customMenu.js') }}" defer></script> --}}

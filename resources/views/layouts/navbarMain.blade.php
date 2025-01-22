@@ -12,7 +12,7 @@
         </button>
     </div>
   
-    <ul id="menu-navbar-main" class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+    <ul id="menu-navbar-main" class=" absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
         <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('home') }}">Home</a></li>
         <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('home') }}">A propos</a></li>
         <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('home') }}">service</a></li>
@@ -26,7 +26,7 @@
         @if(Route::has('login'))
             @auth
                 <div class="relative ">
-                    <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150" id="dropdownMenuButton">
+                    <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150" id="dropdownMenuButtonNav">
                         <div>{{ Auth::user()->name }}</div>
                         <div class="ms-1">
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -34,7 +34,7 @@
                             </svg>
                         </div>
                     </button>
-                    <div class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5" id="dropdownMenu">
+                    <div class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5" id="dropdownMenuNav">
                         <div class="py-1">
                             <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Profile</a>
                             <form method="POST" action="{{ route('logout') }}">
@@ -114,7 +114,6 @@
     </nav>
 </div>
 
-<script>
 
+{{-- <script src="{{ asset('js/customMenu.js') }}" defer></script> --}}
 
-</script>

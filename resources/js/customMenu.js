@@ -39,15 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-const dropdownMenuButton = document.getElementById('dropdownMenuButton');
-    const dropdownMenu = document.getElementById('dropdownMenu');
 
-    dropdownMenuButton.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('hidden');
-    });
 
     function toggleMenuVisibility() {
         const menuNavbar = document.getElementById('menu-navbar-main');
+        console.log('menuNavbar',menuNavbar);
         if (window.innerWidth < 1024) {
           menuNavbar.style.display = 'none';
         } else {
