@@ -4,8 +4,7 @@
 
 
 
-
-#main-nav ul {
+#main-nav-admin ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,11 +12,11 @@
     
 }
 
-/* #main-nav ul li {
+/* #main-nav-admin ul li {
     list-style: none;
 } */
 
-#main-nav ul li a {
+#main-nav-admin ul li a {
     /* text-decoration: none; */
     color: #3d3d3d;
     /* font-size: 22px; */
@@ -26,7 +25,7 @@
     position: relative;
 }
 
-#main-nav ul li a:before {
+#main-nav-admin ul li a:before {
     content: '';
     position: absolute;
     top: 0;
@@ -39,12 +38,12 @@
     transform-origin: left;
 }
 
-#main-nav ul li a:hover:before,
-#main-nav ul li a:hover:after {
+#main-nav-admin ul li a:hover:before,
+#main-nav-admin ul li a:hover:after {
     transform: scaleX(1);
 }
 
-#main-nav ul li a:after {
+#main-nav-admin ul li a:after {
     content: '';
     position: absolute;
     bottom: 0;

@@ -1,3 +1,12 @@
+import './bootstrap';
+
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
+
+
 // Burger menus
 document.addEventListener('DOMContentLoaded', function() {
     // open
@@ -47,13 +56,17 @@ const dropdownMenuButton = document.getElementById('dropdownMenuButton');
     });
 
     function toggleMenuVisibility() {
-        const menuNavbar = document.getElementById('menu-navbar-main');
-        if (window.innerWidth < 1024) {
-          menuNavbar.style.display = 'none';
-        } else {
-          menuNavbar.style.display = 'flex';
-        }
-      }
+        const menuNavbarMain = document.getElementById('menu-navbar-main');
+        const menuNavbarAdmin = document.getElementById('menu-navbar-admin');
     
-      document.addEventListener('DOMContentLoaded', toggleMenuVisibility);
-      window.addEventListener('resize', toggleMenuVisibility);
+        if (window.innerWidth < 1024) {
+            if (menuNavbarMain) menuNavbarMain.style.display = 'none';
+            if (menuNavbarAdmin) menuNavbarAdmin.style.display = 'none';
+        } else {
+            if (menuNavbarMain) menuNavbarMain.style.display = 'flex';
+            if (menuNavbarAdmin) menuNavbarAdmin.style.display = 'flex';
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', toggleMenuVisibility);
+    window.addEventListener('resize', toggleMenuVisibility);

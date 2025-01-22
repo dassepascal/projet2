@@ -1,5 +1,5 @@
 <!-- component -->
-<nav id="main-nav" class="relative px-4 py-4 flex justify-between items-center bg-blue-100 dark:bg-gray-800 ">
+<nav id="main-nav-menu" class="relative px-4 py-4 flex justify-between items-center bg-blue-100 dark:bg-gray-800 ">
     <a class="text-3xl font-bold leading-none" href="{{ route('home') }}">
        <img src="{{ asset('img/logo.png')}}" alt="logo" class="w-30 h-10">
     </a>
@@ -12,7 +12,7 @@
         </button>
     </div>
   
-    <ul id="menu-navbar" class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+    <ul id="menu-navbar-main" class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
         <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('home') }}">Home</a></li>
         <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('home') }}">A propos</a></li>
         <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('home') }}">service</a></li>
