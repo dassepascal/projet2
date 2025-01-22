@@ -12,48 +12,50 @@
                     <a href="{{ route('admin.particulars.create') }}" class="text-blue-500 hover:underline">
                         {{ __('Create New Particular') }}
                     </a>
-                    <table class="min-w-full mt-4">
-                        <thead>
-                            <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    {{ __('Title') }}
-                                </th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    {{ __('Description') }}
-                                </th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    {{ __('Actions') }}
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($particulars as $particular)
+                    <div class="overflow-x-auto mt-4">
+                        <table class="min-w-full">
+                            <thead>
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $particular->title }}
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $particular->description }}
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        <a href="{{ route('admin.particulars.show', $particular) }}" class="text-blue-500 hover:underline">
-                                            {{ __('View') }}
-                                        </a>
-                                        <a href="{{ route('admin.particulars.edit', $particular) }}" class="text-blue-500 hover:underline">
-                                            {{ __('Edit') }}
-                                        </a>
-                                        <form action="{{ route('admin.particulars.destroy', $particular) }}" method="POST" class="inline-block" onsubmit="return confirm('Are you sure you want to delete this particular?')">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="text-red-500 hover:underline">
-                                                {{ __('Delete') }}
-                                            </button>
-                                        </form>
-                                    </td>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        {{ __('Title') }}
+                                    </th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden md:table-cell">
+                                        {{ __('Description') }}
+                                    </th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        {{ __('Actions') }}
+                                    </th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($particulars as $particular)
+                                    <tr class="border-t border-gray-200 dark:border-gray-700">
+                                        <td class="px-4 py-4 whitespace-nowrap">
+                                            {{ $particular->title }}
+                                        </td>
+                                        <td class="px-4 py-4 whitespace-nowrap hidden md:table-cell">
+                                            {{ $particular->description }}
+                                        </td>
+                                        <td class="px-4 py-4 whitespace-nowrap space-x-2">
+                                            <a href="{{ route('admin.particulars.show', $particular) }}" class="text-blue-500 hover:underline">
+                                                {{ __('View') }}
+                                            </a>
+                                            <a href="{{ route('admin.particulars.edit', $particular) }}" class="text-blue-500 hover:underline">
+                                                {{ __('Edit') }}
+                                            </a>
+                                            <form action="{{ route('admin.particulars.destroy', $particular) }}" method="POST" class="inline-block" onsubmit="return confirm('Are you sure you want to delete this particular?')">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="text-red-500 hover:underline">
+                                                    {{ __('Delete') }}
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
