@@ -1,5 +1,5 @@
 <!-- component -->
-<nav id="main-nav-admin" class="relative px-4 py-4 flex justify-between items-center bg-white dark:bg-gray-800 bg-red-500">
+<nav id="main-nav" class="relative px-4 py-4 flex justify-between items-center bg-blue-100 dark:bg-gray-800 ">
     <a class="text-3xl font-bold leading-none" href="{{ route('home') }}">
        <img src="{{ asset('img/logo.png')}}" alt="logo" class="w-30 h-10">
     </a>
